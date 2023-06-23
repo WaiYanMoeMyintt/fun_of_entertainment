@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    height: 120vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    width: 100%;
+}
+
+nav {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111;
+    box-shadow: 0px 2px 1px 0 #1a1919;
+}
+
+nav .nav-left {
+     display: flex;
+     justify-content: space-around;
+     gap:3rem;
+     align-items: center;
+}
+nav .nav-left .nav-logo{
+      padding-right: 2rem;
+}
+nav .nav-left .nav-logo a {
+      color: #e50914;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+}
+
+.nav-left .nav-main {
+    display: flex;
+    gap:2rem;
+}
+.nav-left .nav-main ul li a {
+    font-size: 1.2rem;
+    color: #fff;
+}
+.nav-left .nav-main ul li:hover {
+    color: #e50914;
+}
+
+.nav-right {
+    position: relative;
+}
+.nav-right input {
+    background-color: #666565;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    padding-left: .5rem;
+    color: #303030;
+    font-weight: 400;
+}
+
+.nav-right button {
+    position: absolute;
+    right:1rem;
+    bottom:0.2rem;
+}
+.nav-right button i {
+     cursor: pointer;
+     font-size: 1.4rem;
+}
+
+.movies {
+    background-color: #000;
+    padding: 1rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 3rem;
+}
+.movies .movies-list {
+    padding: .5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1919;
+    border-radius: .6rem;
+    cursor: pointer;
+    height: 46rem;
+}
+.movies-list .flex-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+.movies .movies-list img {
+     max-width: 20rem;
+     height: 20rem;
+     border-radius: .2rem;
+}
+
+.movies h3 {
+    color: #fff;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.movies  p {
+    color: #ccc;
+    word-break: keep-all;
+    margin-top: 1rem;
+    font-size: .8rem;
+}
+
+.search-movies-list{
+    background-color: #000;
+    padding: 1rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-gap: 3rem;
+}
+
+.search-movies{
+    padding: .5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1919;
+    border-radius: .6rem;
+    cursor: pointer;
+    height: 46rem;
+}
+.search-movies h3 {
+    color: #fff;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.search-movies p {
+    color: #ccc;
+    word-break: keep-all;
+    margin-top: 1rem;
+    font-size: .8rem;
+}
+.movies-flex-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* Adjust the height as needed */
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    animation: spin 4s linear 4s infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
